@@ -23,6 +23,7 @@ class library1{
     public void rem(int n)
     {
         Scanner sc = new Scanner(System.in);
+        System.out.println("which book do u whant");
         int b = sc.nextInt();
         System.out.println("the remaing books are");
         for(int i=0;i<n+1;i++)
