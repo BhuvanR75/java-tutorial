@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-import javax.annotation.processing.SupportedOptions;
 class library1{
     
     String books[]=new String[1000];
@@ -29,9 +27,30 @@ class library1{
         for(int i=0;i<n+1;i++)
         {
            if(i==b-1)
-           continue;
+           {
+            books[i]="no book";
+            continue;
+           }
+           
            System.out.println(books[i]);
         }
+    }
+    public void add(int n)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("name of the book returned");
+        String b = sc.nextLine();
+        for(int i =0 ; i<n;i++)
+        {
+            if(books[i]=="null")
+            {
+                books[i]=b;
+            }
+            System.out.println(books[i]);
+
+        }
+        System.out.println("0 book");
+        System.out.println(books[0]);
     }
 }
 public class library {
@@ -43,6 +62,7 @@ public class library {
         int n = sc.nextInt();
         lib.addbook(n); 
         lib.rem(n);
+        lib.add(n);
         
     }
     
